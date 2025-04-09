@@ -1,5 +1,5 @@
-# M3Net: Open-Set Domain Generalization for HSI Classification
-Official PyTorch implementation of the paper《Meta-Reinforcement Learning-Based Open-Set Domain Generalization of Hyperspectral Image Classification Model》
+# M3Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization of Hyperspectral Image Classification Model
+Official PyTorch implementation of the paper《M3Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization of Hyperspectral Image Classification Model》
 
 ## 🚀 fast begining
 

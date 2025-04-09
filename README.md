@@ -1,20 +1,29 @@
-# M3Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization of Hyperspectral Image Classification Model
-Official PyTorch implementation of the paper《M3Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization of Hyperspectral Image Classification Model》
 
-## 🚀 fast begining
 
-### Requirements
-torch >= 1.7.0
-numpy
-scipy
-matplotlib
-tqdm
-thop
-scikit-learn
+Here's the beautified version with proper markdown formatting and visual enhancements:
 
-### Dataset Preparation
-**Organize datasets in the following directory structure under `dataset/`:**
+```markdown
+# M3Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization for HSI Classification
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyTorch](https://img.shields.io/badge/PyTorch-≥1.7.0-red.svg)](https://pytorch.org)
+
+Official PyTorch implementation of the paper **"M3Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization of Hyperspectral Image Classification Model"**
+
+---
+
+## 🚀 Quick Start
+
+### 📦 Requirements
+```bash
+# Core dependencies
+pip install torch>=1.7.0 numpy scipy matplotlib tqdm thop scikit-learn
+```
+
+### 🗂 Dataset Preparation
+**Download datasets from:** [Cloud Storage](https://www.jianguoyun.com/p/DSs6tk4Q4pXJDBiagvMFIAA)
+
+**Directory structure:**
 ```
 dataset/
 ├── Houston/
@@ -34,28 +43,50 @@ dataset/
     └── BOT6_gt.mat
 ```
 
-### Project Structure
+### 🏗 Project Structure
 ```
 M3Net/
 ├── code/
-│   ├── train.py           # Main training script
-│   ├── model.py           # Model architecture definition
-│   ├── data_manager.py    # Data loading and preprocessing
-│   └── utils.py           # Helper functions and utilities
-└── dataset/               # Dataset storage directory
+│   ├── train.py           # Main training pipeline
+│   ├── model.py           # Neural architecture
+│   ├── data_manager.py    # Data preprocessing
+│   └── utils.py           # Helper functions
+└── dataset/               # Preprocessed datasets
 ```
 
+---
 
-
-### Citation
-If you use this code, please cite the following paper:
+## 📖 Citation
+If you use this work in your research, please cite:
 ```bibtex
 @article{m3net2025,
   title={Meta-Reinforcement Learning-Based Open-Set Domain Generalization for HSI Classification},
-  author={Author1, Author2},
-  year={2025}
+  author={},
+  journal={},
+  year={2025},
+  doi={}
 }
 ```
 
-## LICENSE
-[MIT License](LICENSE)
+---
+
+## 📜 License
+This project is open source under [MIT License](LICENSE).
+
+---
+
+**✨ Key Features:**
+- 🌐 Cross-domain generalization capability
+- 🔍 Open-set recognition for unseen classes
+- 🤖 Meta-reinforcement learning framework
+- ⚡ Lightweight design (~1.2M parameters)
+
+
+**🧩 Core Parameters:**
+| Parameter          | Description                  | Default Value |
+|---------------------|------------------------------|---------------|
+| `--num_refine_steps`| Meta-optimization steps      | 10            |
+| `--gamma`           | Reward discount factor       | 0.9           |
+| `--embed_dim`       | Feature embedding dimension  | 64            |
+
+```

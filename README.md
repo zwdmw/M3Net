@@ -12,9 +12,10 @@ tqdm
 thop
 scikit-learn
 
-### Dataset
-**Datasets should be placed in the `dataset/` directory with the following structure:**
+### Dataset Preparation
+**Organize datasets in the following directory structure under `dataset/`:**
 
+```
 dataset/
 ├── Houston/
 │   ├── Houston13.mat
@@ -31,15 +32,19 @@ dataset/
     ├── BOT5_gt.mat
     ├── BOT6.mat
     └── BOT6_gt.mat
+```
 
 ### Project Structure
+```
 M3Net/
 ├── code/
 │   ├── train.py           # Main training script
-│   ├── model.py           # Model definition
+│   ├── model.py           # Model architecture definition
 │   ├── data_manager.py    # Data loading and preprocessing
-│   └── utils.py           # Utility functions
-└── dataset/               # Dataset directory
+│   └── utils.py           # Helper functions and utilities
+└── dataset/               # Dataset storage directory
+```
+
 
 
 ### Citation

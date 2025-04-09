@@ -1,10 +1,10 @@
 
-# MM<sup>3</sup>Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization for HSI Classification
+# M<sup>3</sup>Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization for HSI Classification
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PyTorch](https://img.shields.io/badge/PyTorch-≥1.7.0-red.svg)](https://pytorch.org)
 
-Official PyTorch implementation of the paper **"M$^3$Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization of Hyperspectral Image Classification Model"**
+Official PyTorch implementation of the paper **"M<sup>3</sup>Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization of Hyperspectral Image Classification Model"**
 
 ---
 
@@ -56,7 +56,7 @@ M3Net/
 If you use this work in your research, please cite:
 ```bibtex
 @article{m3net2025,
-  title={M$^3$Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization for HSI Classification},
+  title={M<sup>3</sup>Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization for HSI Classification},
   author={},
   journal={},
   year={2025},

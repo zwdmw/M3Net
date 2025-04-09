@@ -108,15 +108,14 @@ class HSIViT(nn.Module):
         x = self.norm(x)
         return x[:, 0]  # 返回[CLS]令牌的特征
 
-class Classifier(nn.Module):
-    """带有迭代细化的增强型MLP分类器"""
+class APN(nn.Module):
+  
     def __init__(self, in_features=256, hidden_dim=128, num_classes=7, num_steps=3, dropout=0.1):
         super().__init__()
         self.num_classes = num_classes
         self.num_steps = num_steps
         self.dropout = dropout
         
-        # 更复杂的特征提取网络
         self.feature_net = nn.Sequential(
             nn.Linear(in_features+num_classes, hidden_dim),
          
@@ -128,10 +127,7 @@ class Classifier(nn.Module):
             nn.Dropout(dropout)
         )
        
-        
-       
-        
-        # 预测alpha参数的网络
+
         self.var = nn.Sequential(
           
             nn.Linear(hidden_dim , num_classes),
@@ -174,11 +170,11 @@ class Classifier(nn.Module):
             
            
             
-            # 预测alpha参数
+            
             mu = self.mu(hidden) 
             var=self.var(hidden)
             
-            # 创建Dirichlet分布
+           
             action_dist = torch.distributions.Normal(mu, scale=var)
             # 从分布中采样
             if self.training:
@@ -270,8 +266,8 @@ class HSIModel(nn.Module):
         else:
             raise ValueError(f"不支持的模型类型: {model_type}")
         
-        # 使用增强版分类器
-        self.classifier = Classifier(
+        
+        self.policy = APN(
             in_features=embed_dim,
             hidden_dim=64,
             num_classes=num_classes,
@@ -284,10 +280,10 @@ class HSIModel(nn.Module):
         features = self.feature_extractor(x)
         
         if self.training:
-            logits, all_logits,all_state,all_alpha,all_action = self.classifier(features)
+            logits, all_logits,all_state,all_alpha,all_action = self.policy(features)
             return logits, all_logits,all_state,all_alpha,all_action
         else:
-            logits = self.classifier(features)
+            logits = self.policy(features)
             return logits
 
 def create_model_and_optimizer(model_type='vit', 

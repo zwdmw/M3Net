@@ -32,7 +32,7 @@ def get_params():
     parser.add_argument('--patience', type=int, default=6)
     parser.add_argument('--num_refine_steps', type=int, default=10)
     parser.add_argument('--embed_dim', type=int, default=64)
-    parser.add_argument('--dataset', type=str, default='Pavia')
+    parser.add_argument('--dataset', type=str, default='HS')
 
     args, _  = parser.parse_known_args()
     return args
@@ -179,7 +179,7 @@ class Trainer:
         correct = 0
         total = 0
         
-        # 为每个迭代步骤的损失设置权重（后面的步骤权重更大）
+       
         num_steps = self.config['num_refine_steps']
         step_weights = torch.linspace(0.5, 1.0, num_steps).to(self.device)
         step_weights = step_weights / step_weights.sum()
@@ -194,7 +194,7 @@ class Trainer:
             with torch.no_grad():
                 final_pred, all_preds,all_state,all_alpha,all_action = self.model(data)
             
-                # 1. 交叉熵损失（每个步骤）
+              
                 step_losses = []
                 for i, pred in enumerate(all_preds):
                     ce_loss = self.criterion1(pred, target)
@@ -254,7 +254,7 @@ class Trainer:
             for KK in range(10):
                 final_pred, all_preds,all_state,all_alpha,all_action= self.model(data)
             
-                # 1. 交叉熵损失（每个步骤）
+              
                 step_losses = []
                 for i, pred in enumerate(all_preds):
                     ce_loss = self.criterion(pred, target)
@@ -572,7 +572,7 @@ class Trainer:
     
 
 if __name__ == '__main__':
-    # 导入NNI相关库
+
     import argparse
     
    
@@ -607,7 +607,6 @@ if __name__ == '__main__':
         #'9809243,5224391,2408820,9476142,  6894645,9337188,8086717,1439101,1762348,1607451
     }
     
-    # 尝试从NNI获取参数
     
     if dataset=='HS':
         config = base_config

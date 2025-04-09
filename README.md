@@ -1,5 +1,5 @@
 
-# M$^3$Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization for HSI Classification
+# MM<sup>3</sup>Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization for HSI Classification
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PyTorch](https://img.shields.io/badge/PyTorch-≥1.7.0-red.svg)](https://pytorch.org)

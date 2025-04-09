@@ -1,8 +1,4 @@
 
-
-Here's the beautified version with proper markdown formatting and visual enhancements:
-
-```markdown
 # M3Net: Meta-Reinforcement Learning-Based Open-Set Domain Generalization for HSI Classification
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

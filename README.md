@@ -1,7 +1,5 @@
 # M3Net: Open-Set Domain Generalization for HSI Classification
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-论文《Meta-Reinforcement Learning-Based Open-Set Domain Generalization of Hyperspectral Image Classification Model》的PyTorch实现。
+Official PyTorch implementation of the paper《Meta-Reinforcement Learning-Based Open-Set Domain Generalization of Hyperspectral Image Classification Model》
 
 ## 🚀 fast begining
 
@@ -14,7 +12,7 @@ tqdm
 thop
 scikit-learn
 
-### 数据准备
+### Dataset
 **Datasets should be placed in the `dataset/` directory with the following structure:**
 
 dataset/

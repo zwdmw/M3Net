@@ -68,21 +68,3 @@ If you use this work in your research, please cite:
 
 ## 📜 License
 This project is open source under [MIT License](LICENSE).
-
----
-
-**✨ Key Features:**
-- 🌐 Cross-domain generalization capability
-- 🔍 Open-set recognition for unseen classes
-- 🤖 Meta-reinforcement learning framework
-- ⚡ Lightweight design (~1.2M parameters)
-
-
-**🧩 Core Parameters:**
-| Parameter          | Description                  | Default Value |
-|---------------------|------------------------------|---------------|
-| `--num_refine_steps`| Meta-optimization steps      | 10            |
-| `--gamma`           | Reward discount factor       | 0.9           |
-| `--embed_dim`       | Feature embedding dimension  | 64            |
-
-```
